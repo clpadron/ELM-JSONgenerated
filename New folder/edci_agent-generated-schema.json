@@ -1,0 +1,542 @@
+{
+    "$schema": "https://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {"type": "string"},
+        "id": {"type": "string"},
+        "definitions": {"$ref": "#/definitions/definitions_type"}
+    },
+    "definitions": {
+        "Value_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"}
+            }
+        },
+        "issuedDate_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "format": {"type": "string"}
+            }
+        },
+        "properties_type": {
+            "type": "object",
+            "properties": {
+                "Value": {"$ref": "#/definitions/Value_type"},
+                "schemeID": {"$ref": "#/definitions/Value_type"},
+                "schemeAgencyID": {"$ref": "#/definitions/Value_type"},
+                "schemeAgencyName": {"$ref": "#/definitions/Value_type"},
+                "issuedDate": {"$ref": "#/definitions/issuedDate_type"},
+                "type": {"$ref": "#/definitions/Value_type"},
+                "spatialID": {"$ref": "#/definitions/Value_type"}
+            }
+        },
+        "IdentifierType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties_type"}
+            }
+        },
+        "properties2_type": {
+            "type": "object",
+            "properties": {}
+        },
+        "allOf_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "$ref": {"type": "string"},
+                    "type": {"type": "string"},
+                    "properties": {"$ref": "#/definitions/properties2_type"}
+                }
+            }
+        },
+        "LegalIdentifierType_type": {
+            "type": "object",
+            "properties": {
+                "allOf": {"$ref": "#/definitions/allOf_type"}
+            }
+        },
+        "required_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {"type": "string"}
+        },
+        "lang_type": {
+            "type": "object",
+            "properties": {
+                "$ref": {"type": "string"}
+            }
+        },
+        "properties3_type": {
+            "type": "object",
+            "properties": {
+                "Value": {"$ref": "#/definitions/Value_type"},
+                "lang": {"$ref": "#/definitions/lang_type"}
+            }
+        },
+        "LanguageStringType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties3_type"}
+            }
+        },
+        "properties4_type": {
+            "type": "object",
+            "properties": {
+                "Value": {"$ref": "#/definitions/Value_type"},
+                "lang": {"$ref": "#/definitions/lang_type"},
+                "contenttype": {"$ref": "#/definitions/lang_type"}
+            }
+        },
+        "TextType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties4_type"}
+            }
+        },
+        "uri_type": {
+            "type": "object",
+            "properties": {
+                "type": {"$ref": "#/definitions/required_type"}
+            }
+        },
+        "properties5_type": {
+            "type": "object",
+            "properties": {
+                "Value": {"$ref": "#/definitions/Value_type"},
+                "uri": {"$ref": "#/definitions/uri_type"},
+                "listID": {"$ref": "#/definitions/Value_type"}
+            }
+        },
+        "CodeType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties5_type"}
+            }
+        },
+        "subject_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "items": {"$ref": "#/definitions/lang_type"},
+                "minItems": {"type": "integer"}
+            }
+        },
+        "properties6_type": {
+            "type": "object",
+            "properties": {
+                "text": {"$ref": "#/definitions/lang_type"},
+                "subject": {"$ref": "#/definitions/subject_type"}
+            }
+        },
+        "NoteType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties6_type"}
+            }
+        },
+        "properties7_type": {
+            "type": "object",
+            "properties": {
+                "identifier": {"$ref": "#/definitions/subject_type"},
+                "fullAddress": {"$ref": "#/definitions/subject_type"},
+                "country": {"$ref": "#/definitions/lang_type"}
+            }
+        },
+        "AddressType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties7_type"}
+            }
+        },
+        "properties8_type": {
+            "type": "object",
+            "properties": {
+                "identifier": {"$ref": "#/definitions/subject_type"},
+                "name": {"$ref": "#/definitions/subject_type"},
+                "description": {"$ref": "#/definitions/subject_type"},
+                "hasAddress": {"$ref": "#/definitions/subject_type"},
+                "spatialCode": {"$ref": "#/definitions/subject_type"}
+            }
+        },
+        "LocationType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties8_type"}
+            }
+        },
+        "properties9_type": {
+            "type": "object",
+            "properties": {
+                "phoneNumber": {"$ref": "#/definitions/Value_type"},
+                "countryDialing": {"$ref": "#/definitions/Value_type"},
+                "areaDialing": {"$ref": "#/definitions/Value_type"},
+                "dialNumber": {"$ref": "#/definitions/Value_type"}
+            }
+        },
+        "PhoneType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties9_type"}
+            }
+        },
+        "properties10_type": {
+            "type": "object",
+            "properties": {
+                "uri": {"$ref": "#/definitions/issuedDate_type"}
+            }
+        },
+        "MBoxType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties10_type"}
+            }
+        },
+        "properties11_type": {
+            "type": "object",
+            "properties": {
+                "note": {"$ref": "#/definitions/subject_type"},
+                "description": {"$ref": "#/definitions/subject_type"},
+                "address": {"$ref": "#/definitions/subject_type"},
+                "phone": {"$ref": "#/definitions/subject_type"},
+                "mailBox": {"$ref": "#/definitions/subject_type"},
+                "webresource": {"$ref": "#/definitions/subject_type"},
+                "wallet": {"$ref": "#/definitions/subject_type"}
+            }
+        },
+        "ContactPointType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties11_type"}
+            }
+        },
+        "properties12_type": {
+            "type": "object",
+            "properties": {
+                "nationalId": {"$ref": "#/definitions/lang_type"},
+                "identifier": {"$ref": "#/definitions/subject_type"},
+                "fullName": {"$ref": "#/definitions/lang_type"},
+                "givenNames": {"$ref": "#/definitions/lang_type"},
+                "familyName": {"$ref": "#/definitions/lang_type"},
+                "dateOfBirth": {"$ref": "#/definitions/Value_type"},
+                "placeOfBirth": {"$ref": "#/definitions/lang_type"},
+                "gender": {"$ref": "#/definitions/lang_type"},
+                "citizenshipCountry": {"$ref": "#/definitions/subject_type"},
+                "hasLocation": {"$ref": "#/definitions/subject_type"},
+                "contactPoint": {"$ref": "#/definitions/subject_type"},
+                "id": {"$ref": "#/definitions/issuedDate_type"}
+            }
+        },
+        "PersonType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties12_type"}
+            }
+        },
+        "properties13_type": {
+            "type": "object",
+            "properties": {
+                "Value": {"$ref": "#/definitions/Value_type"},
+                "unit": {"$ref": "#/definitions/Value_type"}
+            }
+        },
+        "AmountType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties13_type"}
+            }
+        },
+        "properties14_type": {
+            "type": "object",
+            "properties": {
+                "title": {"$ref": "#/definitions/subject_type"},
+                "language": {"$ref": "#/definitions/subject_type"},
+                "subject": {"$ref": "#/definitions/subject_type"},
+                "uri": {"$ref": "#/definitions/issuedDate_type"}
+            }
+        },
+        "DocumentType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties14_type"}
+            }
+        },
+        "properties15_type": {
+            "type": "object",
+            "properties": {
+                "title": {"$ref": "#/definitions/subject_type"},
+                "description": {"$ref": "#/definitions/subject_type"},
+                "supplementaryDoc": {"$ref": "#/definitions/subject_type"},
+                "id": {"$ref": "#/definitions/Value_type"}
+            }
+        },
+        "ScoringSchemeType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties15_type"}
+            }
+        },
+        "properties16_type": {
+            "type": "object",
+            "properties": {
+                "Value": {"$ref": "#/definitions/Value_type"},
+                "schemeID": {"$ref": "#/definitions/issuedDate_type"}
+            }
+        },
+        "NotationType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties16_type"}
+            }
+        },
+        "content_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "items": {"$ref": "#/definitions/Value_type"}
+            }
+        },
+        "properties17_type": {
+            "type": "object",
+            "properties": {
+                "contentType": {"$ref": "#/definitions/lang_type"},
+                "contentEncoding": {"$ref": "#/definitions/lang_type"},
+                "contentSize": {"$ref": "#/definitions/Value_type"},
+                "contentUrl": {"$ref": "#/definitions/issuedDate_type"},
+                "content": {"$ref": "#/definitions/content_type"},
+                "id": {"$ref": "#/definitions/issuedDate_type"}
+            }
+        },
+        "MediaObjectType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties17_type"}
+            }
+        },
+        "properties18_type": {
+            "type": "object",
+            "properties": {
+                "idref": {"$ref": "#/definitions/issuedDate_type"}
+            }
+        },
+        "IdReferenceType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties18_type"}
+            }
+        },
+        "properties19_type": {
+            "type": "object",
+            "properties": {
+                "identifier": {"$ref": "#/definitions/subject_type"},
+                "type": {"$ref": "#/definitions/subject_type"},
+                "prefLabel": {"$ref": "#/definitions/subject_type"},
+                "altLabel": {"$ref": "#/definitions/subject_type"},
+                "additionalNote": {"$ref": "#/definitions/subject_type"},
+                "hasLocation": {"$ref": "#/definitions/subject_type"},
+                "contactPoint": {"$ref": "#/definitions/subject_type"},
+                "id": {"$ref": "#/definitions/issuedDate_type"}
+            }
+        },
+        "AgentType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties19_type"}
+            }
+        },
+        "properties20_type": {
+            "type": "object",
+            "properties": {
+                "Value": {"$ref": "#/definitions/Value_type"},
+                "schemeID": {"$ref": "#/definitions/Value_type"}
+            }
+        },
+        "NumericScoreType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties20_type"}
+            }
+        },
+        "properties21_type": {
+            "type": "object",
+            "properties": {
+                "Attachment": {"$ref": "#/definitions/subject_type"}
+            }
+        },
+        "AttachmentListType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties21_type"}
+            }
+        },
+        "properties22_type": {
+            "type": "object",
+            "properties": {
+                "registration": {"$ref": "#/definitions/lang_type"},
+                "vatIdentifier": {"$ref": "#/definitions/subject_type"},
+                "taxIdentifier": {"$ref": "#/definitions/subject_type"},
+                "identifier": {"$ref": "#/definitions/subject_type"},
+                "type": {"$ref": "#/definitions/subject_type"},
+                "prefLabel": {"$ref": "#/definitions/subject_type"},
+                "altLabel": {"$ref": "#/definitions/subject_type"},
+                "homepage": {"$ref": "#/definitions/subject_type"},
+                "additionalNote": {"$ref": "#/definitions/subject_type"},
+                "hasLocation": {"$ref": "#/definitions/subject_type"},
+                "contactPoint": {"$ref": "#/definitions/subject_type"},
+                "hasAccreditation": {"$ref": "#/definitions/subject_type"},
+                "hasUnit": {"$ref": "#/definitions/subject_type"},
+                "unitOf": {"$ref": "#/definitions/lang_type"},
+                "logo": {"$ref": "#/definitions/lang_type"},
+                "id": {"$ref": "#/definitions/issuedDate_type"}
+            }
+        },
+        "OrganizationType_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "required": {"$ref": "#/definitions/required_type"},
+                "properties": {"$ref": "#/definitions/properties22_type"}
+            }
+        },
+        "allOf2_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {"type": "string"},
+                    "enum": {"$ref": "#/definitions/required_type"}
+                }
+            }
+        },
+        "LanguageCharCodeEnumType_type": {
+            "type": "object",
+            "properties": {
+                "allOf": {"$ref": "#/definitions/allOf2_type"}
+            }
+        },
+        "allOf3_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "$ref": {"type": "string"},
+                    "enum": {"$ref": "#/definitions/required_type"}
+                }
+            }
+        },
+        "ECTSCreditPointSystemEnumType_type": {
+            "type": "object",
+            "properties": {
+                "allOf": {"$ref": "#/definitions/allOf3_type"}
+            }
+        },
+        "definitions_type": {
+            "type": "object",
+            "properties": {
+                "IdentifierType": {"$ref": "#/definitions/IdentifierType_type"},
+                "LegalIdentifierType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "LanguageStringType": {"$ref": "#/definitions/LanguageStringType_type"},
+                "TextType": {"$ref": "#/definitions/TextType_type"},
+                "CodeType": {"$ref": "#/definitions/CodeType_type"},
+                "URIBasedCodeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "SubjectTypeCodeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "NoteType": {"$ref": "#/definitions/NoteType_type"},
+                "CountryCodeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "AddressType": {"$ref": "#/definitions/AddressType_type"},
+                "LocationCodeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "LocationType": {"$ref": "#/definitions/LocationType_type"},
+                "GenderCodeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "PhoneType": {"$ref": "#/definitions/PhoneType_type"},
+                "MBoxType": {"$ref": "#/definitions/MBoxType_type"},
+                "InteractiveWebResourceType": {"$ref": "#/definitions/MBoxType_type"},
+                "ContactPointType": {"$ref": "#/definitions/ContactPointType_type"},
+                "PersonType": {"$ref": "#/definitions/PersonType_type"},
+                "LearningScheduleTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "QualificationFrameworkType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "MediaTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "CommunicationChannelUsageType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "IscedFOetCodeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "ActivityTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "VerificationCheckCodeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "SkillAlignmentTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "AmountType": {"$ref": "#/definitions/AmountType_type"},
+                "LearningOpportunityTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "IDVerificationMethodType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "CredentialTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "LanguageCodeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "DocumentType": {"$ref": "#/definitions/DocumentType_type"},
+                "ScoringSchemeType": {"$ref": "#/definitions/ScoringSchemeType_type"},
+                "AccreditationTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "NotationType": {"$ref": "#/definitions/NotationType_type"},
+                "ColorNotationType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "ContentEncodingType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "MediaObjectType": {"$ref": "#/definitions/MediaObjectType_type"},
+                "AssessmentTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "EscoOrganizationTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "ImageObjectType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "ImageMediaTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "ReusabilityLevelType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "SpatialCodeLocationType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "IdReferenceType": {"$ref": "#/definitions/IdReferenceType_type"},
+                "EntitlementStatusType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "AgentType": {"$ref": "#/definitions/AgentType_type"},
+                "LearningOutcomeTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "LearningModeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "VerificationStatusCodeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "LearningSettingTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "NumericScoreType": {"$ref": "#/definitions/NumericScoreType_type"},
+                "CreditPointsType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "EntitlementTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "ECTSCreditPointsType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "AttachmentListType": {"$ref": "#/definitions/AttachmentListType_type"},
+                "EQFLevelType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "OrganizationType": {"$ref": "#/definitions/OrganizationType_type"},
+                "CommunicationChannelTypeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "TextScoreType": {"$ref": "#/definitions/NumericScoreType_type"},
+                "TargetGroupCodeType": {"$ref": "#/definitions/LegalIdentifierType_type"},
+                "LanguageCharCodeEnumType": {"$ref": "#/definitions/LanguageCharCodeEnumType_type"},
+                "TextContentTypeCodeEnumType": {"$ref": "#/definitions/LanguageCharCodeEnumType_type"},
+                "CreditPointSystemEnumType": {"$ref": "#/definitions/LanguageCharCodeEnumType_type"},
+                "ECTSCreditPointSystemEnumType": {"$ref": "#/definitions/ECTSCreditPointSystemEnumType_type"}
+            }
+        }
+    }
+}

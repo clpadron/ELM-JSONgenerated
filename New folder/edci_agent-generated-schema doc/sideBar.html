@@ -1,0 +1,1085 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Documentation edci_agent-generated-schema.json</title><script>var sourceBoxes= new Array('source_#/Schema', 
+				'source_#/properties/$schema', 
+				'source_#/properties/id', 
+				'source_#/properties/definitions', 
+				'source_#/definitions/definitions_type', 
+				'source_#/definitions/IdentifierType_type', 
+				'source_#/definitions/IdentifierType_type/properties/type', 
+				'source_#/definitions/properties_type', 
+				'source_#/definitions/Value_type', 
+				'source_#/definitions/Value_type/properties/type', 
+				'source_#/definitions/properties_type/properties/Value', 
+				'source_#/definitions/properties_type/properties/schemeID', 
+				'source_#/definitions/properties_type/properties/schemeAgencyID', 
+				'source_#/definitions/properties_type/properties/schemeAgencyName', 
+				'source_#/definitions/issuedDate_type', 
+				'source_#/definitions/issuedDate_type/properties/type', 
+				'source_#/definitions/issuedDate_type/properties/format', 
+				'source_#/definitions/properties_type/properties/issuedDate', 
+				'source_#/definitions/properties_type/properties/type', 
+				'source_#/definitions/properties_type/properties/spatialID', 
+				'source_#/definitions/IdentifierType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/IdentifierType', 
+				'source_#/definitions/LegalIdentifierType_type', 
+				'source_#/definitions/allOf_type', 
+				'source_#/definitions/allOf_type/items', 
+				'source_#/definitions/allOf_type/items/properties/$ref', 
+				'source_#/definitions/allOf_type/items/properties/type', 
+				'source_#/definitions/properties2_type', 
+				'source_#/definitions/allOf_type/items/properties/properties', 
+				'source_#/definitions/LegalIdentifierType_type/properties/allOf', 
+				'source_#/definitions/definitions_type/properties/LegalIdentifierType', 
+				'source_#/definitions/LanguageStringType_type', 
+				'source_#/definitions/LanguageStringType_type/properties/type', 
+				'source_#/definitions/required_type', 
+				'source_#/definitions/required_type/items', 
+				'source_#/definitions/LanguageStringType_type/properties/required', 
+				'source_#/definitions/properties3_type', 
+				'source_#/definitions/properties3_type/properties/Value', 
+				'source_#/definitions/lang_type', 
+				'source_#/definitions/lang_type/properties/$ref', 
+				'source_#/definitions/properties3_type/properties/lang', 
+				'source_#/definitions/LanguageStringType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/LanguageStringType', 
+				'source_#/definitions/TextType_type', 
+				'source_#/definitions/TextType_type/properties/type', 
+				'source_#/definitions/TextType_type/properties/required', 
+				'source_#/definitions/properties4_type', 
+				'source_#/definitions/properties4_type/properties/Value', 
+				'source_#/definitions/properties4_type/properties/lang', 
+				'source_#/definitions/properties4_type/properties/contenttype', 
+				'source_#/definitions/TextType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/TextType', 
+				'source_#/definitions/CodeType_type', 
+				'source_#/definitions/CodeType_type/properties/type', 
+				'source_#/definitions/properties5_type', 
+				'source_#/definitions/properties5_type/properties/Value', 
+				'source_#/definitions/uri_type', 
+				'source_#/definitions/uri_type/properties/type', 
+				'source_#/definitions/properties5_type/properties/uri', 
+				'source_#/definitions/properties5_type/properties/listID', 
+				'source_#/definitions/CodeType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/CodeType', 
+				'source_#/definitions/definitions_type/properties/URIBasedCodeType', 
+				'source_#/definitions/definitions_type/properties/SubjectTypeCodeType', 
+				'source_#/definitions/NoteType_type', 
+				'source_#/definitions/NoteType_type/properties/type', 
+				'source_#/definitions/NoteType_type/properties/required', 
+				'source_#/definitions/properties6_type', 
+				'source_#/definitions/properties6_type/properties/text', 
+				'source_#/definitions/subject_type', 
+				'source_#/definitions/subject_type/properties/type', 
+				'source_#/definitions/subject_type/properties/items', 
+				'source_#/definitions/subject_type/properties/minItems', 
+				'source_#/definitions/properties6_type/properties/subject', 
+				'source_#/definitions/NoteType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/NoteType', 
+				'source_#/definitions/definitions_type/properties/CountryCodeType', 
+				'source_#/definitions/AddressType_type', 
+				'source_#/definitions/AddressType_type/properties/type', 
+				'source_#/definitions/properties7_type', 
+				'source_#/definitions/properties7_type/properties/identifier', 
+				'source_#/definitions/properties7_type/properties/fullAddress', 
+				'source_#/definitions/properties7_type/properties/country', 
+				'source_#/definitions/AddressType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/AddressType', 
+				'source_#/definitions/definitions_type/properties/LocationCodeType', 
+				'source_#/definitions/LocationType_type', 
+				'source_#/definitions/LocationType_type/properties/type', 
+				'source_#/definitions/properties8_type', 
+				'source_#/definitions/properties8_type/properties/identifier', 
+				'source_#/definitions/properties8_type/properties/name', 
+				'source_#/definitions/properties8_type/properties/description', 
+				'source_#/definitions/properties8_type/properties/hasAddress', 
+				'source_#/definitions/properties8_type/properties/spatialCode', 
+				'source_#/definitions/LocationType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/LocationType', 
+				'source_#/definitions/definitions_type/properties/GenderCodeType', 
+				'source_#/definitions/PhoneType_type', 
+				'source_#/definitions/PhoneType_type/properties/type', 
+				'source_#/definitions/properties9_type', 
+				'source_#/definitions/properties9_type/properties/phoneNumber', 
+				'source_#/definitions/properties9_type/properties/countryDialing', 
+				'source_#/definitions/properties9_type/properties/areaDialing', 
+				'source_#/definitions/properties9_type/properties/dialNumber', 
+				'source_#/definitions/PhoneType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/PhoneType', 
+				'source_#/definitions/MBoxType_type', 
+				'source_#/definitions/MBoxType_type/properties/type', 
+				'source_#/definitions/MBoxType_type/properties/required', 
+				'source_#/definitions/properties10_type', 
+				'source_#/definitions/properties10_type/properties/uri', 
+				'source_#/definitions/MBoxType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/MBoxType', 
+				'source_#/definitions/definitions_type/properties/InteractiveWebResourceType', 
+				'source_#/definitions/ContactPointType_type', 
+				'source_#/definitions/ContactPointType_type/properties/type', 
+				'source_#/definitions/properties11_type', 
+				'source_#/definitions/properties11_type/properties/note', 
+				'source_#/definitions/properties11_type/properties/description', 
+				'source_#/definitions/properties11_type/properties/address', 
+				'source_#/definitions/properties11_type/properties/phone', 
+				'source_#/definitions/properties11_type/properties/mailBox', 
+				'source_#/definitions/properties11_type/properties/webresource', 
+				'source_#/definitions/properties11_type/properties/wallet', 
+				'source_#/definitions/ContactPointType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/ContactPointType', 
+				'source_#/definitions/PersonType_type', 
+				'source_#/definitions/PersonType_type/properties/type', 
+				'source_#/definitions/PersonType_type/properties/required', 
+				'source_#/definitions/properties12_type', 
+				'source_#/definitions/properties12_type/properties/nationalId', 
+				'source_#/definitions/properties12_type/properties/identifier', 
+				'source_#/definitions/properties12_type/properties/fullName', 
+				'source_#/definitions/properties12_type/properties/givenNames', 
+				'source_#/definitions/properties12_type/properties/familyName', 
+				'source_#/definitions/properties12_type/properties/dateOfBirth', 
+				'source_#/definitions/properties12_type/properties/placeOfBirth', 
+				'source_#/definitions/properties12_type/properties/gender', 
+				'source_#/definitions/properties12_type/properties/citizenshipCountry', 
+				'source_#/definitions/properties12_type/properties/hasLocation', 
+				'source_#/definitions/properties12_type/properties/contactPoint', 
+				'source_#/definitions/properties12_type/properties/id', 
+				'source_#/definitions/PersonType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/PersonType', 
+				'source_#/definitions/definitions_type/properties/LearningScheduleTypeType', 
+				'source_#/definitions/definitions_type/properties/QualificationFrameworkType', 
+				'source_#/definitions/definitions_type/properties/MediaTypeType', 
+				'source_#/definitions/definitions_type/properties/CommunicationChannelUsageType', 
+				'source_#/definitions/definitions_type/properties/IscedFOetCodeType', 
+				'source_#/definitions/definitions_type/properties/ActivityTypeType', 
+				'source_#/definitions/definitions_type/properties/VerificationCheckCodeType', 
+				'source_#/definitions/definitions_type/properties/SkillAlignmentTypeType', 
+				'source_#/definitions/AmountType_type', 
+				'source_#/definitions/AmountType_type/properties/type', 
+				'source_#/definitions/AmountType_type/properties/required', 
+				'source_#/definitions/properties13_type', 
+				'source_#/definitions/properties13_type/properties/Value', 
+				'source_#/definitions/properties13_type/properties/unit', 
+				'source_#/definitions/AmountType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/AmountType', 
+				'source_#/definitions/definitions_type/properties/LearningOpportunityTypeType', 
+				'source_#/definitions/definitions_type/properties/IDVerificationMethodType', 
+				'source_#/definitions/definitions_type/properties/CredentialTypeType', 
+				'source_#/definitions/definitions_type/properties/LanguageCodeType', 
+				'source_#/definitions/DocumentType_type', 
+				'source_#/definitions/DocumentType_type/properties/type', 
+				'source_#/definitions/DocumentType_type/properties/required', 
+				'source_#/definitions/properties14_type', 
+				'source_#/definitions/properties14_type/properties/title', 
+				'source_#/definitions/properties14_type/properties/language', 
+				'source_#/definitions/properties14_type/properties/subject', 
+				'source_#/definitions/properties14_type/properties/uri', 
+				'source_#/definitions/DocumentType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/DocumentType', 
+				'source_#/definitions/ScoringSchemeType_type', 
+				'source_#/definitions/ScoringSchemeType_type/properties/type', 
+				'source_#/definitions/ScoringSchemeType_type/properties/required', 
+				'source_#/definitions/properties15_type', 
+				'source_#/definitions/properties15_type/properties/title', 
+				'source_#/definitions/properties15_type/properties/description', 
+				'source_#/definitions/properties15_type/properties/supplementaryDoc', 
+				'source_#/definitions/properties15_type/properties/id', 
+				'source_#/definitions/ScoringSchemeType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/ScoringSchemeType', 
+				'source_#/definitions/definitions_type/properties/AccreditationTypeType', 
+				'source_#/definitions/NotationType_type', 
+				'source_#/definitions/NotationType_type/properties/type', 
+				'source_#/definitions/NotationType_type/properties/required', 
+				'source_#/definitions/properties16_type', 
+				'source_#/definitions/properties16_type/properties/Value', 
+				'source_#/definitions/properties16_type/properties/schemeID', 
+				'source_#/definitions/NotationType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/NotationType', 
+				'source_#/definitions/definitions_type/properties/ColorNotationType', 
+				'source_#/definitions/definitions_type/properties/ContentEncodingType', 
+				'source_#/definitions/MediaObjectType_type', 
+				'source_#/definitions/MediaObjectType_type/properties/type', 
+				'source_#/definitions/MediaObjectType_type/properties/required', 
+				'source_#/definitions/properties17_type', 
+				'source_#/definitions/properties17_type/properties/contentType', 
+				'source_#/definitions/properties17_type/properties/contentEncoding', 
+				'source_#/definitions/properties17_type/properties/contentSize', 
+				'source_#/definitions/properties17_type/properties/contentUrl', 
+				'source_#/definitions/content_type', 
+				'source_#/definitions/content_type/properties/type', 
+				'source_#/definitions/content_type/properties/items', 
+				'source_#/definitions/properties17_type/properties/content', 
+				'source_#/definitions/properties17_type/properties/id', 
+				'source_#/definitions/MediaObjectType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/MediaObjectType', 
+				'source_#/definitions/definitions_type/properties/AssessmentTypeType', 
+				'source_#/definitions/definitions_type/properties/EscoOrganizationTypeType', 
+				'source_#/definitions/definitions_type/properties/ImageObjectType', 
+				'source_#/definitions/definitions_type/properties/ImageMediaTypeType', 
+				'source_#/definitions/definitions_type/properties/ReusabilityLevelType', 
+				'source_#/definitions/definitions_type/properties/SpatialCodeLocationType', 
+				'source_#/definitions/IdReferenceType_type', 
+				'source_#/definitions/IdReferenceType_type/properties/type', 
+				'source_#/definitions/IdReferenceType_type/properties/required', 
+				'source_#/definitions/properties18_type', 
+				'source_#/definitions/properties18_type/properties/idref', 
+				'source_#/definitions/IdReferenceType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/IdReferenceType', 
+				'source_#/definitions/definitions_type/properties/EntitlementStatusType', 
+				'source_#/definitions/AgentType_type', 
+				'source_#/definitions/AgentType_type/properties/type', 
+				'source_#/definitions/AgentType_type/properties/required', 
+				'source_#/definitions/properties19_type', 
+				'source_#/definitions/properties19_type/properties/identifier', 
+				'source_#/definitions/properties19_type/properties/type', 
+				'source_#/definitions/properties19_type/properties/prefLabel', 
+				'source_#/definitions/properties19_type/properties/altLabel', 
+				'source_#/definitions/properties19_type/properties/additionalNote', 
+				'source_#/definitions/properties19_type/properties/hasLocation', 
+				'source_#/definitions/properties19_type/properties/contactPoint', 
+				'source_#/definitions/properties19_type/properties/id', 
+				'source_#/definitions/AgentType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/AgentType', 
+				'source_#/definitions/definitions_type/properties/LearningOutcomeTypeType', 
+				'source_#/definitions/definitions_type/properties/LearningModeType', 
+				'source_#/definitions/definitions_type/properties/VerificationStatusCodeType', 
+				'source_#/definitions/definitions_type/properties/LearningSettingTypeType', 
+				'source_#/definitions/NumericScoreType_type', 
+				'source_#/definitions/NumericScoreType_type/properties/type', 
+				'source_#/definitions/properties20_type', 
+				'source_#/definitions/properties20_type/properties/Value', 
+				'source_#/definitions/properties20_type/properties/schemeID', 
+				'source_#/definitions/NumericScoreType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/NumericScoreType', 
+				'source_#/definitions/definitions_type/properties/CreditPointsType', 
+				'source_#/definitions/definitions_type/properties/EntitlementTypeType', 
+				'source_#/definitions/definitions_type/properties/ECTSCreditPointsType', 
+				'source_#/definitions/AttachmentListType_type', 
+				'source_#/definitions/AttachmentListType_type/properties/type', 
+				'source_#/definitions/properties21_type', 
+				'source_#/definitions/properties21_type/properties/Attachment', 
+				'source_#/definitions/AttachmentListType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/AttachmentListType', 
+				'source_#/definitions/definitions_type/properties/EQFLevelType', 
+				'source_#/definitions/OrganizationType_type', 
+				'source_#/definitions/OrganizationType_type/properties/type', 
+				'source_#/definitions/OrganizationType_type/properties/required', 
+				'source_#/definitions/properties22_type', 
+				'source_#/definitions/properties22_type/properties/registration', 
+				'source_#/definitions/properties22_type/properties/vatIdentifier', 
+				'source_#/definitions/properties22_type/properties/taxIdentifier', 
+				'source_#/definitions/properties22_type/properties/identifier', 
+				'source_#/definitions/properties22_type/properties/type', 
+				'source_#/definitions/properties22_type/properties/prefLabel', 
+				'source_#/definitions/properties22_type/properties/altLabel', 
+				'source_#/definitions/properties22_type/properties/homepage', 
+				'source_#/definitions/properties22_type/properties/additionalNote', 
+				'source_#/definitions/properties22_type/properties/hasLocation', 
+				'source_#/definitions/properties22_type/properties/contactPoint', 
+				'source_#/definitions/properties22_type/properties/hasAccreditation', 
+				'source_#/definitions/properties22_type/properties/hasUnit', 
+				'source_#/definitions/properties22_type/properties/unitOf', 
+				'source_#/definitions/properties22_type/properties/logo', 
+				'source_#/definitions/properties22_type/properties/id', 
+				'source_#/definitions/OrganizationType_type/properties/properties', 
+				'source_#/definitions/definitions_type/properties/OrganizationType', 
+				'source_#/definitions/definitions_type/properties/CommunicationChannelTypeType', 
+				'source_#/definitions/definitions_type/properties/TextScoreType', 
+				'source_#/definitions/definitions_type/properties/TargetGroupCodeType', 
+				'source_#/definitions/LanguageCharCodeEnumType_type', 
+				'source_#/definitions/allOf2_type', 
+				'source_#/definitions/allOf2_type/items', 
+				'source_#/definitions/allOf2_type/items/properties/type', 
+				'source_#/definitions/allOf2_type/items/properties/enum', 
+				'source_#/definitions/LanguageCharCodeEnumType_type/properties/allOf', 
+				'source_#/definitions/definitions_type/properties/LanguageCharCodeEnumType', 
+				'source_#/definitions/definitions_type/properties/TextContentTypeCodeEnumType', 
+				'source_#/definitions/definitions_type/properties/CreditPointSystemEnumType', 
+				'source_#/definitions/ECTSCreditPointSystemEnumType_type', 
+				'source_#/definitions/allOf3_type', 
+				'source_#/definitions/allOf3_type/items', 
+				'source_#/definitions/allOf3_type/items/properties/$ref', 
+				'source_#/definitions/allOf3_type/items/properties/enum', 
+				'source_#/definitions/ECTSCreditPointSystemEnumType_type/properties/allOf', 
+				'source_#/definitions/definitions_type/properties/ECTSCreditPointSystemEnumType');
+var propertiesBoxes= new Array('properties_#/Schema', 
+				'properties_#/definitions/definitions_type', 
+				'properties_#/definitions/IdentifierType_type', 
+				'properties_#/definitions/properties_type', 
+				'properties_#/definitions/Value_type', 
+				'properties_#/definitions/issuedDate_type', 
+				'properties_#/definitions/LegalIdentifierType_type', 
+				'properties_#/definitions/allOf_type/items', 
+				'properties_#/definitions/LanguageStringType_type', 
+				'properties_#/definitions/properties3_type', 
+				'properties_#/definitions/lang_type', 
+				'properties_#/definitions/TextType_type', 
+				'properties_#/definitions/properties4_type', 
+				'properties_#/definitions/CodeType_type', 
+				'properties_#/definitions/properties5_type', 
+				'properties_#/definitions/uri_type', 
+				'properties_#/definitions/NoteType_type', 
+				'properties_#/definitions/properties6_type', 
+				'properties_#/definitions/subject_type', 
+				'properties_#/definitions/AddressType_type', 
+				'properties_#/definitions/properties7_type', 
+				'properties_#/definitions/LocationType_type', 
+				'properties_#/definitions/properties8_type', 
+				'properties_#/definitions/PhoneType_type', 
+				'properties_#/definitions/properties9_type', 
+				'properties_#/definitions/MBoxType_type', 
+				'properties_#/definitions/properties10_type', 
+				'properties_#/definitions/ContactPointType_type', 
+				'properties_#/definitions/properties11_type', 
+				'properties_#/definitions/PersonType_type', 
+				'properties_#/definitions/properties12_type', 
+				'properties_#/definitions/AmountType_type', 
+				'properties_#/definitions/properties13_type', 
+				'properties_#/definitions/DocumentType_type', 
+				'properties_#/definitions/properties14_type', 
+				'properties_#/definitions/ScoringSchemeType_type', 
+				'properties_#/definitions/properties15_type', 
+				'properties_#/definitions/NotationType_type', 
+				'properties_#/definitions/properties16_type', 
+				'properties_#/definitions/MediaObjectType_type', 
+				'properties_#/definitions/properties17_type', 
+				'properties_#/definitions/content_type', 
+				'properties_#/definitions/IdReferenceType_type', 
+				'properties_#/definitions/properties18_type', 
+				'properties_#/definitions/AgentType_type', 
+				'properties_#/definitions/properties19_type', 
+				'properties_#/definitions/NumericScoreType_type', 
+				'properties_#/definitions/properties20_type', 
+				'properties_#/definitions/AttachmentListType_type', 
+				'properties_#/definitions/properties21_type', 
+				'properties_#/definitions/OrganizationType_type', 
+				'properties_#/definitions/properties22_type', 
+				'properties_#/definitions/LanguageCharCodeEnumType_type', 
+				'properties_#/definitions/allOf2_type/items', 
+				'properties_#/definitions/ECTSCreditPointSystemEnumType_type', 
+				'properties_#/definitions/allOf3_type/items');
+var constraintsBoxes= new Array('constraints_#/definitions/allOf_type', 
+				'constraints_#/definitions/required_type', 
+				'constraints_#/definitions/allOf2_type', 
+				'constraints_#/definitions/allOf3_type');
+var combinedBoxes= new Array('combined_#/Schema', 
+				'combined_#/properties/$schema', 
+				'combined_#/properties/id', 
+				'combined_#/properties/definitions', 
+				'combined_#/definitions/definitions_type', 
+				'combined_#/definitions/IdentifierType_type', 
+				'combined_#/definitions/IdentifierType_type/properties/type', 
+				'combined_#/definitions/properties_type', 
+				'combined_#/definitions/Value_type', 
+				'combined_#/definitions/Value_type/properties/type', 
+				'combined_#/definitions/properties_type/properties/Value', 
+				'combined_#/definitions/properties_type/properties/schemeID', 
+				'combined_#/definitions/properties_type/properties/schemeAgencyID', 
+				'combined_#/definitions/properties_type/properties/schemeAgencyName', 
+				'combined_#/definitions/issuedDate_type', 
+				'combined_#/definitions/issuedDate_type/properties/type', 
+				'combined_#/definitions/issuedDate_type/properties/format', 
+				'combined_#/definitions/properties_type/properties/issuedDate', 
+				'combined_#/definitions/properties_type/properties/type', 
+				'combined_#/definitions/properties_type/properties/spatialID', 
+				'combined_#/definitions/IdentifierType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/IdentifierType', 
+				'combined_#/definitions/LegalIdentifierType_type', 
+				'combined_#/definitions/allOf_type', 
+				'combined_#/definitions/allOf_type/items', 
+				'combined_#/definitions/allOf_type/items/properties/$ref', 
+				'combined_#/definitions/allOf_type/items/properties/type', 
+				'combined_#/definitions/properties2_type', 
+				'combined_#/definitions/allOf_type/items/properties/properties', 
+				'combined_#/definitions/LegalIdentifierType_type/properties/allOf', 
+				'combined_#/definitions/definitions_type/properties/LegalIdentifierType', 
+				'combined_#/definitions/LanguageStringType_type', 
+				'combined_#/definitions/LanguageStringType_type/properties/type', 
+				'combined_#/definitions/required_type', 
+				'combined_#/definitions/required_type/items', 
+				'combined_#/definitions/LanguageStringType_type/properties/required', 
+				'combined_#/definitions/properties3_type', 
+				'combined_#/definitions/properties3_type/properties/Value', 
+				'combined_#/definitions/lang_type', 
+				'combined_#/definitions/lang_type/properties/$ref', 
+				'combined_#/definitions/properties3_type/properties/lang', 
+				'combined_#/definitions/LanguageStringType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/LanguageStringType', 
+				'combined_#/definitions/TextType_type', 
+				'combined_#/definitions/TextType_type/properties/type', 
+				'combined_#/definitions/TextType_type/properties/required', 
+				'combined_#/definitions/properties4_type', 
+				'combined_#/definitions/properties4_type/properties/Value', 
+				'combined_#/definitions/properties4_type/properties/lang', 
+				'combined_#/definitions/properties4_type/properties/contenttype', 
+				'combined_#/definitions/TextType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/TextType', 
+				'combined_#/definitions/CodeType_type', 
+				'combined_#/definitions/CodeType_type/properties/type', 
+				'combined_#/definitions/properties5_type', 
+				'combined_#/definitions/properties5_type/properties/Value', 
+				'combined_#/definitions/uri_type', 
+				'combined_#/definitions/uri_type/properties/type', 
+				'combined_#/definitions/properties5_type/properties/uri', 
+				'combined_#/definitions/properties5_type/properties/listID', 
+				'combined_#/definitions/CodeType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/CodeType', 
+				'combined_#/definitions/definitions_type/properties/URIBasedCodeType', 
+				'combined_#/definitions/definitions_type/properties/SubjectTypeCodeType', 
+				'combined_#/definitions/NoteType_type', 
+				'combined_#/definitions/NoteType_type/properties/type', 
+				'combined_#/definitions/NoteType_type/properties/required', 
+				'combined_#/definitions/properties6_type', 
+				'combined_#/definitions/properties6_type/properties/text', 
+				'combined_#/definitions/subject_type', 
+				'combined_#/definitions/subject_type/properties/type', 
+				'combined_#/definitions/subject_type/properties/items', 
+				'combined_#/definitions/subject_type/properties/minItems', 
+				'combined_#/definitions/properties6_type/properties/subject', 
+				'combined_#/definitions/NoteType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/NoteType', 
+				'combined_#/definitions/definitions_type/properties/CountryCodeType', 
+				'combined_#/definitions/AddressType_type', 
+				'combined_#/definitions/AddressType_type/properties/type', 
+				'combined_#/definitions/properties7_type', 
+				'combined_#/definitions/properties7_type/properties/identifier', 
+				'combined_#/definitions/properties7_type/properties/fullAddress', 
+				'combined_#/definitions/properties7_type/properties/country', 
+				'combined_#/definitions/AddressType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/AddressType', 
+				'combined_#/definitions/definitions_type/properties/LocationCodeType', 
+				'combined_#/definitions/LocationType_type', 
+				'combined_#/definitions/LocationType_type/properties/type', 
+				'combined_#/definitions/properties8_type', 
+				'combined_#/definitions/properties8_type/properties/identifier', 
+				'combined_#/definitions/properties8_type/properties/name', 
+				'combined_#/definitions/properties8_type/properties/description', 
+				'combined_#/definitions/properties8_type/properties/hasAddress', 
+				'combined_#/definitions/properties8_type/properties/spatialCode', 
+				'combined_#/definitions/LocationType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/LocationType', 
+				'combined_#/definitions/definitions_type/properties/GenderCodeType', 
+				'combined_#/definitions/PhoneType_type', 
+				'combined_#/definitions/PhoneType_type/properties/type', 
+				'combined_#/definitions/properties9_type', 
+				'combined_#/definitions/properties9_type/properties/phoneNumber', 
+				'combined_#/definitions/properties9_type/properties/countryDialing', 
+				'combined_#/definitions/properties9_type/properties/areaDialing', 
+				'combined_#/definitions/properties9_type/properties/dialNumber', 
+				'combined_#/definitions/PhoneType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/PhoneType', 
+				'combined_#/definitions/MBoxType_type', 
+				'combined_#/definitions/MBoxType_type/properties/type', 
+				'combined_#/definitions/MBoxType_type/properties/required', 
+				'combined_#/definitions/properties10_type', 
+				'combined_#/definitions/properties10_type/properties/uri', 
+				'combined_#/definitions/MBoxType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/MBoxType', 
+				'combined_#/definitions/definitions_type/properties/InteractiveWebResourceType', 
+				'combined_#/definitions/ContactPointType_type', 
+				'combined_#/definitions/ContactPointType_type/properties/type', 
+				'combined_#/definitions/properties11_type', 
+				'combined_#/definitions/properties11_type/properties/note', 
+				'combined_#/definitions/properties11_type/properties/description', 
+				'combined_#/definitions/properties11_type/properties/address', 
+				'combined_#/definitions/properties11_type/properties/phone', 
+				'combined_#/definitions/properties11_type/properties/mailBox', 
+				'combined_#/definitions/properties11_type/properties/webresource', 
+				'combined_#/definitions/properties11_type/properties/wallet', 
+				'combined_#/definitions/ContactPointType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/ContactPointType', 
+				'combined_#/definitions/PersonType_type', 
+				'combined_#/definitions/PersonType_type/properties/type', 
+				'combined_#/definitions/PersonType_type/properties/required', 
+				'combined_#/definitions/properties12_type', 
+				'combined_#/definitions/properties12_type/properties/nationalId', 
+				'combined_#/definitions/properties12_type/properties/identifier', 
+				'combined_#/definitions/properties12_type/properties/fullName', 
+				'combined_#/definitions/properties12_type/properties/givenNames', 
+				'combined_#/definitions/properties12_type/properties/familyName', 
+				'combined_#/definitions/properties12_type/properties/dateOfBirth', 
+				'combined_#/definitions/properties12_type/properties/placeOfBirth', 
+				'combined_#/definitions/properties12_type/properties/gender', 
+				'combined_#/definitions/properties12_type/properties/citizenshipCountry', 
+				'combined_#/definitions/properties12_type/properties/hasLocation', 
+				'combined_#/definitions/properties12_type/properties/contactPoint', 
+				'combined_#/definitions/properties12_type/properties/id', 
+				'combined_#/definitions/PersonType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/PersonType', 
+				'combined_#/definitions/definitions_type/properties/LearningScheduleTypeType', 
+				'combined_#/definitions/definitions_type/properties/QualificationFrameworkType', 
+				'combined_#/definitions/definitions_type/properties/MediaTypeType', 
+				'combined_#/definitions/definitions_type/properties/CommunicationChannelUsageType', 
+				'combined_#/definitions/definitions_type/properties/IscedFOetCodeType', 
+				'combined_#/definitions/definitions_type/properties/ActivityTypeType', 
+				'combined_#/definitions/definitions_type/properties/VerificationCheckCodeType', 
+				'combined_#/definitions/definitions_type/properties/SkillAlignmentTypeType', 
+				'combined_#/definitions/AmountType_type', 
+				'combined_#/definitions/AmountType_type/properties/type', 
+				'combined_#/definitions/AmountType_type/properties/required', 
+				'combined_#/definitions/properties13_type', 
+				'combined_#/definitions/properties13_type/properties/Value', 
+				'combined_#/definitions/properties13_type/properties/unit', 
+				'combined_#/definitions/AmountType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/AmountType', 
+				'combined_#/definitions/definitions_type/properties/LearningOpportunityTypeType', 
+				'combined_#/definitions/definitions_type/properties/IDVerificationMethodType', 
+				'combined_#/definitions/definitions_type/properties/CredentialTypeType', 
+				'combined_#/definitions/definitions_type/properties/LanguageCodeType', 
+				'combined_#/definitions/DocumentType_type', 
+				'combined_#/definitions/DocumentType_type/properties/type', 
+				'combined_#/definitions/DocumentType_type/properties/required', 
+				'combined_#/definitions/properties14_type', 
+				'combined_#/definitions/properties14_type/properties/title', 
+				'combined_#/definitions/properties14_type/properties/language', 
+				'combined_#/definitions/properties14_type/properties/subject', 
+				'combined_#/definitions/properties14_type/properties/uri', 
+				'combined_#/definitions/DocumentType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/DocumentType', 
+				'combined_#/definitions/ScoringSchemeType_type', 
+				'combined_#/definitions/ScoringSchemeType_type/properties/type', 
+				'combined_#/definitions/ScoringSchemeType_type/properties/required', 
+				'combined_#/definitions/properties15_type', 
+				'combined_#/definitions/properties15_type/properties/title', 
+				'combined_#/definitions/properties15_type/properties/description', 
+				'combined_#/definitions/properties15_type/properties/supplementaryDoc', 
+				'combined_#/definitions/properties15_type/properties/id', 
+				'combined_#/definitions/ScoringSchemeType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/ScoringSchemeType', 
+				'combined_#/definitions/definitions_type/properties/AccreditationTypeType', 
+				'combined_#/definitions/NotationType_type', 
+				'combined_#/definitions/NotationType_type/properties/type', 
+				'combined_#/definitions/NotationType_type/properties/required', 
+				'combined_#/definitions/properties16_type', 
+				'combined_#/definitions/properties16_type/properties/Value', 
+				'combined_#/definitions/properties16_type/properties/schemeID', 
+				'combined_#/definitions/NotationType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/NotationType', 
+				'combined_#/definitions/definitions_type/properties/ColorNotationType', 
+				'combined_#/definitions/definitions_type/properties/ContentEncodingType', 
+				'combined_#/definitions/MediaObjectType_type', 
+				'combined_#/definitions/MediaObjectType_type/properties/type', 
+				'combined_#/definitions/MediaObjectType_type/properties/required', 
+				'combined_#/definitions/properties17_type', 
+				'combined_#/definitions/properties17_type/properties/contentType', 
+				'combined_#/definitions/properties17_type/properties/contentEncoding', 
+				'combined_#/definitions/properties17_type/properties/contentSize', 
+				'combined_#/definitions/properties17_type/properties/contentUrl', 
+				'combined_#/definitions/content_type', 
+				'combined_#/definitions/content_type/properties/type', 
+				'combined_#/definitions/content_type/properties/items', 
+				'combined_#/definitions/properties17_type/properties/content', 
+				'combined_#/definitions/properties17_type/properties/id', 
+				'combined_#/definitions/MediaObjectType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/MediaObjectType', 
+				'combined_#/definitions/definitions_type/properties/AssessmentTypeType', 
+				'combined_#/definitions/definitions_type/properties/EscoOrganizationTypeType', 
+				'combined_#/definitions/definitions_type/properties/ImageObjectType', 
+				'combined_#/definitions/definitions_type/properties/ImageMediaTypeType', 
+				'combined_#/definitions/definitions_type/properties/ReusabilityLevelType', 
+				'combined_#/definitions/definitions_type/properties/SpatialCodeLocationType', 
+				'combined_#/definitions/IdReferenceType_type', 
+				'combined_#/definitions/IdReferenceType_type/properties/type', 
+				'combined_#/definitions/IdReferenceType_type/properties/required', 
+				'combined_#/definitions/properties18_type', 
+				'combined_#/definitions/properties18_type/properties/idref', 
+				'combined_#/definitions/IdReferenceType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/IdReferenceType', 
+				'combined_#/definitions/definitions_type/properties/EntitlementStatusType', 
+				'combined_#/definitions/AgentType_type', 
+				'combined_#/definitions/AgentType_type/properties/type', 
+				'combined_#/definitions/AgentType_type/properties/required', 
+				'combined_#/definitions/properties19_type', 
+				'combined_#/definitions/properties19_type/properties/identifier', 
+				'combined_#/definitions/properties19_type/properties/type', 
+				'combined_#/definitions/properties19_type/properties/prefLabel', 
+				'combined_#/definitions/properties19_type/properties/altLabel', 
+				'combined_#/definitions/properties19_type/properties/additionalNote', 
+				'combined_#/definitions/properties19_type/properties/hasLocation', 
+				'combined_#/definitions/properties19_type/properties/contactPoint', 
+				'combined_#/definitions/properties19_type/properties/id', 
+				'combined_#/definitions/AgentType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/AgentType', 
+				'combined_#/definitions/definitions_type/properties/LearningOutcomeTypeType', 
+				'combined_#/definitions/definitions_type/properties/LearningModeType', 
+				'combined_#/definitions/definitions_type/properties/VerificationStatusCodeType', 
+				'combined_#/definitions/definitions_type/properties/LearningSettingTypeType', 
+				'combined_#/definitions/NumericScoreType_type', 
+				'combined_#/definitions/NumericScoreType_type/properties/type', 
+				'combined_#/definitions/properties20_type', 
+				'combined_#/definitions/properties20_type/properties/Value', 
+				'combined_#/definitions/properties20_type/properties/schemeID', 
+				'combined_#/definitions/NumericScoreType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/NumericScoreType', 
+				'combined_#/definitions/definitions_type/properties/CreditPointsType', 
+				'combined_#/definitions/definitions_type/properties/EntitlementTypeType', 
+				'combined_#/definitions/definitions_type/properties/ECTSCreditPointsType', 
+				'combined_#/definitions/AttachmentListType_type', 
+				'combined_#/definitions/AttachmentListType_type/properties/type', 
+				'combined_#/definitions/properties21_type', 
+				'combined_#/definitions/properties21_type/properties/Attachment', 
+				'combined_#/definitions/AttachmentListType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/AttachmentListType', 
+				'combined_#/definitions/definitions_type/properties/EQFLevelType', 
+				'combined_#/definitions/OrganizationType_type', 
+				'combined_#/definitions/OrganizationType_type/properties/type', 
+				'combined_#/definitions/OrganizationType_type/properties/required', 
+				'combined_#/definitions/properties22_type', 
+				'combined_#/definitions/properties22_type/properties/registration', 
+				'combined_#/definitions/properties22_type/properties/vatIdentifier', 
+				'combined_#/definitions/properties22_type/properties/taxIdentifier', 
+				'combined_#/definitions/properties22_type/properties/identifier', 
+				'combined_#/definitions/properties22_type/properties/type', 
+				'combined_#/definitions/properties22_type/properties/prefLabel', 
+				'combined_#/definitions/properties22_type/properties/altLabel', 
+				'combined_#/definitions/properties22_type/properties/homepage', 
+				'combined_#/definitions/properties22_type/properties/additionalNote', 
+				'combined_#/definitions/properties22_type/properties/hasLocation', 
+				'combined_#/definitions/properties22_type/properties/contactPoint', 
+				'combined_#/definitions/properties22_type/properties/hasAccreditation', 
+				'combined_#/definitions/properties22_type/properties/hasUnit', 
+				'combined_#/definitions/properties22_type/properties/unitOf', 
+				'combined_#/definitions/properties22_type/properties/logo', 
+				'combined_#/definitions/properties22_type/properties/id', 
+				'combined_#/definitions/OrganizationType_type/properties/properties', 
+				'combined_#/definitions/definitions_type/properties/OrganizationType', 
+				'combined_#/definitions/definitions_type/properties/CommunicationChannelTypeType', 
+				'combined_#/definitions/definitions_type/properties/TextScoreType', 
+				'combined_#/definitions/definitions_type/properties/TargetGroupCodeType', 
+				'combined_#/definitions/LanguageCharCodeEnumType_type', 
+				'combined_#/definitions/allOf2_type', 
+				'combined_#/definitions/allOf2_type/items', 
+				'combined_#/definitions/allOf2_type/items/properties/type', 
+				'combined_#/definitions/allOf2_type/items/properties/enum', 
+				'combined_#/definitions/LanguageCharCodeEnumType_type/properties/allOf', 
+				'combined_#/definitions/definitions_type/properties/LanguageCharCodeEnumType', 
+				'combined_#/definitions/definitions_type/properties/TextContentTypeCodeEnumType', 
+				'combined_#/definitions/definitions_type/properties/CreditPointSystemEnumType', 
+				'combined_#/definitions/ECTSCreditPointSystemEnumType_type', 
+				'combined_#/definitions/allOf3_type', 
+				'combined_#/definitions/allOf3_type/items', 
+				'combined_#/definitions/allOf3_type/items/properties/$ref', 
+				'combined_#/definitions/allOf3_type/items/properties/enum', 
+				'combined_#/definitions/ECTSCreditPointSystemEnumType_type/properties/allOf', 
+				'combined_#/definitions/definitions_type/properties/ECTSCreditPointSystemEnumType');
+
+                           
+                           
+                           var button_prefix = 'button_';
+                           
+                           /**
+                           * Returns an element in the current HTML document.
+                           *
+                           * @param elementID Identifier of HTML element
+                           * @return               HTML element object
+                           */
+                           function getElementObject(elementID) {
+                           var elemObj = null;
+                           if (document.getElementById) {
+                           elemObj = document.getElementById(elementID);
+                           }
+                           return elemObj;
+                           }
+                           
+                           /**
+                           * Switches the state of a collapseable box, e.g.
+                           * if it's opened, it'll be closed, and vice versa.
+                           *
+                           * @param boxID Identifier of box
+                           */
+                           function switchState(boxID) {
+                           var boxObj = getElementObject(boxID);
+                           var buttonObj = getElementObject(button_prefix + boxID);
+                           if (boxObj == null || buttonObj == null) {
+                           // Box or button not found
+                           } else if (boxObj.style.display == "none") {
+                           // Box is closed, so open it
+                           openBox(boxObj, buttonObj);
+                           } else if (boxObj.style.display == "block") {
+                           // Box is opened, so close it
+                           closeBox(boxObj, buttonObj);
+                           }
+                           }
+                           
+                           /**
+                           * Opens a collapseable box.
+                           *
+                           * @param boxObj       Collapseable box
+                           * @param buttonObj Button controlling box
+                           */
+                           function openBox(boxObj, buttonObj) {
+                           if (boxObj == null || buttonObj == null) {
+                           // Box or button not found
+                           } else {
+                           // Change 'display' CSS property of box
+                           boxObj.style.display = "block";
+                           
+                           // Change text of button
+                           if (boxObj.style.display == "block") {
+                           buttonObj.src = "img/btM.gif";
+                           }
+                           }
+                           }
+                           
+                           /**
+                           * Closes a collapseable box.
+                           *
+                           * @param boxObj       Collapseable box
+                           * @param buttonObj Button controlling box
+                           */
+                           function closeBox(boxObj, buttonObj) {
+                           if (boxObj == null || buttonObj == null) {
+                           // Box or button not found
+                           } else {
+                           // Change 'display' CSS property of box
+                           boxObj.style.display = "none";
+                           
+                           // Change text of button
+                           if (boxObj.style.display == "none") {
+                           buttonObj.src = "img/btP.gif";
+                           }
+                           }
+                           }
+                           
+                           function switchStateForAll(buttonObj, boxList) {
+                           if (buttonObj == null) {
+                           // button not found
+                           } else if (buttonObj.value == "+") {
+                           // Expand all
+                           expandAll(boxList);
+                           buttonObj.value = "-";
+                           } else if (buttonObj.value == "-") {
+                           // Collapse all
+                           collapseAll(boxList);
+                           buttonObj.value = "+";
+                           }
+                           }
+                           
+                           /**
+                           * Closes all boxes in a given list.
+                           *
+                           * @param boxList Array of box IDs
+                           */
+                           function collapseAll(boxList) {
+                           var idx;
+                           for (idx = 0; idx < boxList.length; idx++) {
+                           var boxObj = getElementObject(boxList[idx]);
+                           var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                           closeBox(boxObj, buttonObj);
+                           }
+                           }
+                           
+                           /**
+                           * Open all boxes in a given list.
+                           *
+                           * @param boxList Array of box IDs
+                           */
+                           function expandAll(boxList) {
+                           var idx;
+                           for (idx = 0; idx < boxList.length; idx++) {
+                           var boxObj = getElementObject(boxList[idx]);
+                           var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                           openBox(boxObj, buttonObj);
+                           }
+                           }
+                           
+                           /**
+                           * Update the message presented in the title of the html page.
+                           * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+                           * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+                           * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+                           */
+                           function updatePageTitle(message) {
+                           top.document.title = message;
+                           }
+                           
+                           
+                           
+                           /**
+                           * Finds an HTML element by its ID and makes it floatable over the normal content.
+                           *
+                           * @param x_displacement The difference in pixels to the right side of the window from 
+                           *           the left side of the element.
+                           * @param y_displacement The difference in pixels to the right side of the window from 
+                           *           the top of the element.          
+                           */
+                           function findAndFloat(id, x_displacement, y_displacement){
+                           
+                           var element = getElementObject(id);            
+                           
+                           window[id + "_obj"] = element;
+                           
+                           if(document.layers) {
+                           element.style = element;
+                           }
+                           
+                           element.current_y = y_displacement;      
+                           element.first_time = true;
+                           
+                           element.floatElement = function(){
+                           // It may be closed by an user action.
+                           
+                           // Target X and Y coordinates.
+                           var x, y;
+                           
+                           var myWidth = 0, myHeight = 0;
+                           if( typeof( window.innerWidth ) == 'number' ) {
+                           //Non-IE
+                           myWidth = window.innerWidth;
+                           myHeight = window.innerHeight;
+                           } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                           //IE 6+ in 'standards compliant mode'
+                           myWidth = document.documentElement.clientWidth;
+                           myHeight = document.documentElement.clientHeight;
+                           } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                           //IE 4 compatible
+                           myWidth = document.body.clientWidth;
+                           myHeight = document.body.clientHeight;
+                           }
+                           
+                           
+                           x = myWidth - x_displacement;
+                           
+                           var ns = (navigator.appName.indexOf("Netscape") != -1);               
+                           y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                           document.documentElement.scrollTop : document.body.scrollTop;               
+                           y = y + y_displacement;               
+                           
+                           // The current y is the current coordinate of the floating element.
+                           // This should be at the limit the y target coordinate.
+                           this.current_y += (y - this.current_y)/1.25;
+                           
+                           // Add the pixels constant after the values
+                           // and move the element.
+                           var px = document.layers ? "" : "px";
+                           this.style.left =  x + px;
+                           this.style.top =  this.current_y + px;
+                           
+                           setTimeout(this.id + "_obj.floatElement()", 100);
+                           }
+                           
+                           element.floatElement();
+                           return element;
+                           }
+                           
+                           /**
+                           * Finds an HTML element by its ID and makes it floatable over the normal content.
+                           *
+                           * @param x_displacement The difference in pixels to the right side of the window from 
+                           *           the left side of the element.
+                           * @param y_displacement The difference in pixels to the right side of the window from 
+                           *           the top of the element.          
+                           */
+                           function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+                           
+                           if (!isChunked) {
+                           var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+                           // Make all the tabs invisible.
+                           for (i = 0; i < 3; i++){
+                           var tab = getElementObject(selectIds[i]);
+                           tab.style.display = 'none';
+                           }
+                           var selTab = getElementObject(id);
+                           selTab.style.display = 'block';
+                           } else {
+                           if (id == 'toc_group_by_namespace') {
+                           parent.indexFrame.location = indexFileNamespace;
+                           } else  if (id == 'toc_group_by_location') {
+                           parent.indexFrame.location = indexFileLocation;
+                           } else  if (id == 'toc_group_by_component_type') {
+                           parent.indexFrame.location = indexFileComponent;
+                           }
+                           }
+                           }
+                       </script><link rel="stylesheet" href="docHtml.css" type="text/css">
+   </head>
+   <body>
+      <div id="gr_content" style="display: block;">
+         <h2><a id="INDEX">Table of Contents</a></h2>
+         <div class="horizontalLayout">
+            <table class="rt">
+               <tbody>
+                  <tr>
+                     <td class="rt_cornerTopLeft"></td>
+                     <td class="rt_lineTop"></td>
+                     <td class="rt_cornerTopRight"></td>
+                  </tr>
+                  <tr>
+                     <td class="rt_lineLeft"></td>
+                     <td class="rt_content">
+                        <table class="componentGroup">
+                           <tbody>
+                              <tr>
+                                 <td class="componentGroup"><input id="button_Main_Schema" type="image" alt="mainButton" src="img/btM.gif" onclick="switchState('Main_Schema');" class="control"></td>
+                                 <td class="componentGroup">
+                                    <div class="componentGroupTitle">Main Schema</div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="componentGroup"></td>
+                                 <td class="componentGroup">
+                                    <div id="Main_Schema" class="componentGroup" style="display:block">
+                                       <div><b><b><a href="mainFrame.html#/Schema" target="mainFrame">Schema</a></b></b></div>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                     <td class="rt_lineRight"></td>
+                  </tr>
+                  <tr>
+                     <td class="rt_cornerBottomLeft"></td>
+                     <td class="rt_lineBottom"></td>
+                     <td class="rt_cornerBottomRight"></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div class="horizontalLayout">
+            <table class="rt">
+               <tbody>
+                  <tr>
+                     <td class="rt_cornerTopLeft"></td>
+                     <td class="rt_lineTop"></td>
+                     <td class="rt_cornerTopRight"></td>
+                  </tr>
+                  <tr>
+                     <td class="rt_lineLeft"></td>
+                     <td class="rt_content">
+                        <table class="componentGroup">
+                           <tbody>
+                              <tr>
+                                 <td class="componentGroup"><input id="button_Main_Properties" type="image" alt="PropertiesButton" src="img/btM.gif" onclick="switchState('Main_Properties');" class="control"></td>
+                                 <td class="componentGroup">
+                                    <div class="componentGroupTitle">Properties</div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="componentGroup"></td>
+                                 <td class="componentGroup">
+                                    <div id="Main_Properties" class="componentGroup" style="display:block">
+                                       <div><b><b><a href="mainFrame.html#/properties/$schema" target="mainFrame">$schema</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/properties/id" target="mainFrame">id</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/properties/definitions" target="mainFrame">definitions</a></b></b></div>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                     <td class="rt_lineRight"></td>
+                  </tr>
+                  <tr>
+                     <td class="rt_cornerBottomLeft"></td>
+                     <td class="rt_lineBottom"></td>
+                     <td class="rt_cornerBottomRight"></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div class="horizontalLayout">
+            <table class="rt">
+               <tbody>
+                  <tr>
+                     <td class="rt_cornerTopLeft"></td>
+                     <td class="rt_lineTop"></td>
+                     <td class="rt_cornerTopRight"></td>
+                  </tr>
+                  <tr>
+                     <td class="rt_lineLeft"></td>
+                     <td class="rt_content">
+                        <table class="componentGroup">
+                           <tbody>
+                              <tr>
+                                 <td class="componentGroup"><input id="button_Main_Definitions" type="image" alt="DefinitionButton" src="img/btM.gif" onclick="switchState('Main_Definitions');" class="control"></td>
+                                 <td class="componentGroup">
+                                    <div class="componentGroupTitle">Definitions</div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="componentGroup"></td>
+                                 <td class="componentGroup">
+                                    <div id="Main_Definitions" class="componentGroup" style="display:block">
+                                       <div><b><b><a href="mainFrame.html#/definitions/definitions_type" target="mainFrame">definitions_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/IdentifierType_type" target="mainFrame">IdentifierType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties_type" target="mainFrame">properties_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/Value_type" target="mainFrame">Value_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/issuedDate_type" target="mainFrame">issuedDate_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/LegalIdentifierType_type" target="mainFrame">LegalIdentifierType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/allOf_type" target="mainFrame">allOf_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties2_type" target="mainFrame">properties2_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/LanguageStringType_type" target="mainFrame">LanguageStringType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/required_type" target="mainFrame">required_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties3_type" target="mainFrame">properties3_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/lang_type" target="mainFrame">lang_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/TextType_type" target="mainFrame">TextType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties4_type" target="mainFrame">properties4_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/CodeType_type" target="mainFrame">CodeType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties5_type" target="mainFrame">properties5_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/uri_type" target="mainFrame">uri_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/NoteType_type" target="mainFrame">NoteType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties6_type" target="mainFrame">properties6_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/subject_type" target="mainFrame">subject_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/AddressType_type" target="mainFrame">AddressType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties7_type" target="mainFrame">properties7_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/LocationType_type" target="mainFrame">LocationType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties8_type" target="mainFrame">properties8_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/PhoneType_type" target="mainFrame">PhoneType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties9_type" target="mainFrame">properties9_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/MBoxType_type" target="mainFrame">MBoxType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties10_type" target="mainFrame">properties10_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/ContactPointType_type" target="mainFrame">ContactPointType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties11_type" target="mainFrame">properties11_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/PersonType_type" target="mainFrame">PersonType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties12_type" target="mainFrame">properties12_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/AmountType_type" target="mainFrame">AmountType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties13_type" target="mainFrame">properties13_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/DocumentType_type" target="mainFrame">DocumentType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties14_type" target="mainFrame">properties14_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/ScoringSchemeType_type" target="mainFrame">ScoringSchemeType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties15_type" target="mainFrame">properties15_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/NotationType_type" target="mainFrame">NotationType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties16_type" target="mainFrame">properties16_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/MediaObjectType_type" target="mainFrame">MediaObjectType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties17_type" target="mainFrame">properties17_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/content_type" target="mainFrame">content_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/IdReferenceType_type" target="mainFrame">IdReferenceType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties18_type" target="mainFrame">properties18_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/AgentType_type" target="mainFrame">AgentType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties19_type" target="mainFrame">properties19_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/NumericScoreType_type" target="mainFrame">NumericScoreType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties20_type" target="mainFrame">properties20_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/AttachmentListType_type" target="mainFrame">AttachmentListType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties21_type" target="mainFrame">properties21_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/OrganizationType_type" target="mainFrame">OrganizationType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/properties22_type" target="mainFrame">properties22_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/LanguageCharCodeEnumType_type" target="mainFrame">LanguageCharCodeEnumType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/allOf2_type" target="mainFrame">allOf2_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/ECTSCreditPointSystemEnumType_type" target="mainFrame">ECTSCreditPointSystemEnumType_type</a></b></b></div>
+                                       <div><b><b><a href="mainFrame.html#/definitions/allOf3_type" target="mainFrame">allOf3_type</a></b></b></div>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                     <td class="rt_lineRight"></td>
+                  </tr>
+                  <tr>
+                     <td class="rt_cornerBottomLeft"></td>
+                     <td class="rt_lineBottom"></td>
+                     <td class="rt_cornerBottomRight"></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div style="clear:left"></div>
+      </div>
+      <div class="footer">
+         <hr>
+            <div align="center">JSON Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup></div>
+         
+      </div>
+   </body>
+</html>

@@ -1,0 +1,131 @@
+{
+    "$schema": "https://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "@targetNamespace": {"type": "string"},
+        "@elementFormDefault": {"type": "string"},
+        "@version": {"type": "string"},
+        "include": {"$ref": "#/definitions/include_type"},
+        "complexType": {"$ref": "#/definitions/complexType_type"},
+        "simpleType": {"$ref": "#/definitions/simpleType_type"}
+    },
+    "definitions": {
+        "include_type": {
+            "type": "object",
+            "properties": {
+                "@schemaLocation": {"type": "string"}
+            }
+        },
+        "annotation_type": {
+            "type": "object",
+            "properties": {
+                "documentation": {"type": "string"}
+            }
+        },
+        "attribute_type": {
+            "type": "object",
+            "properties": {
+                "@name": {"type": "string"},
+                "@type": {"type": "string"},
+                "@use": {"type": "string"},
+                "annotation": {"$ref": "#/definitions/annotation_type"}
+            }
+        },
+        "extension_type": {
+            "type": "object",
+            "properties": {
+                "@base": {"type": "string"},
+                "attribute": {"$ref": "#/definitions/attribute_type"}
+            }
+        },
+        "simpleContent_type": {
+            "type": "object",
+            "properties": {
+                "extension": {"$ref": "#/definitions/extension_type"},
+                "restriction": {"$ref": "#/definitions/extension_type"}
+            }
+        },
+        "element_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@name": {"type": "string"},
+                    "@type": {"type": "string"},
+                    "annotation": {"$ref": "#/definitions/annotation_type"},
+                    "@minOccurs": {"type": "string"},
+                    "@maxOccurs": {"type": "string"}
+                },
+                "required": [
+                    "annotation",
+                    "@name",
+                    "@type"
+                ]
+            }
+        },
+        "sequence_type": {
+            "type": "object",
+            "properties": {
+                "element": {"$ref": "#/definitions/element_type"}
+            }
+        },
+        "complexType_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@name": {"type": "string"},
+                    "annotation": {"$ref": "#/definitions/annotation_type"},
+                    "simpleContent": {"$ref": "#/definitions/simpleContent_type"},
+                    "sequence": {"$ref": "#/definitions/sequence_type"},
+                    "attribute": {"$ref": "#/definitions/attribute_type"}
+                },
+                "required": ["@name"]
+            }
+        },
+        "documentation_type": {
+            "type": "object",
+            "properties": {
+                "@lang": {"type": "string"},
+                "#text": {"type": "string"}
+            }
+        },
+        "annotation2_type": {
+            "type": "object",
+            "properties": {
+                "documentation": {"$ref": "#/definitions/documentation_type"}
+            }
+        },
+        "pattern_type": {
+            "type": "object",
+            "properties": {
+                "@value": {"type": "string"}
+            }
+        },
+        "restriction_type": {
+            "type": "object",
+            "properties": {
+                "@base": {"type": "string"},
+                "pattern": {"$ref": "#/definitions/pattern_type"}
+            }
+        },
+        "simpleType_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@name": {"type": "string"},
+                    "annotation": {"$ref": "#/definitions/annotation2_type"},
+                    "restriction": {"$ref": "#/definitions/restriction_type"}
+                },
+                "required": [
+                    "@name",
+                    "restriction"
+                ]
+            }
+        }
+    }
+}

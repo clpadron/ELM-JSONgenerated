@@ -1,0 +1,68 @@
+{
+    "$schema": "https://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "@targetNamespace": {"type": "string"},
+        "@elementFormDefault": {"type": "string"},
+        "@version": {"type": "string"},
+        "include": {"$ref": "#/definitions/include_type"},
+        "simpleType": {"$ref": "#/definitions/simpleType_type"}
+    },
+    "definitions": {
+        "include_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@schemaLocation": {"type": "string"}
+                },
+                "required": ["@schemaLocation"]
+            }
+        },
+        "annotation_type": {
+            "type": "object",
+            "properties": {
+                "documentation": {"type": "null"}
+            }
+        },
+        "enumeration_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@value": {"type": "string"}
+                },
+                "required": ["@value"]
+            }
+        },
+        "restriction_type": {
+            "type": "object",
+            "properties": {
+                "@base": {"type": "string"},
+                "enumeration": {"$ref": "#/definitions/enumeration_type"}
+            }
+        },
+        "union_type": {
+            "type": "object",
+            "properties": {
+                "@memberTypes": {"type": "string"}
+            }
+        },
+        "simpleType_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@name": {"type": "string"},
+                    "annotation": {"$ref": "#/definitions/annotation_type"},
+                    "restriction": {"$ref": "#/definitions/restriction_type"},
+                    "union": {"$ref": "#/definitions/union_type"}
+                },
+                "required": ["@name"]
+            }
+        }
+    }
+}

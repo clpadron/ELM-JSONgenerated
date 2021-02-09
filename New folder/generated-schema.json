@@ -1,0 +1,156 @@
+{
+    "$schema": "https://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {"type": "string"},
+        "type": {"type": "string"},
+        "properties": {"$ref": "#/definitions/properties_type"},
+        "definitions": {"$ref": "#/definitions/definitions_type"}
+    },
+    "definitions": {
+        "@targetNamespace_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"}
+            }
+        },
+        "include_type": {
+            "type": "object",
+            "properties": {
+                "$ref": {"type": "string"}
+            }
+        },
+        "properties_type": {
+            "type": "object",
+            "properties": {
+                "@targetNamespace": {"$ref": "#/definitions/@targetNamespace_type"},
+                "@elementFormDefault": {"$ref": "#/definitions/@targetNamespace_type"},
+                "@version": {"$ref": "#/definitions/@targetNamespace_type"},
+                "include": {"$ref": "#/definitions/include_type"},
+                "element": {"$ref": "#/definitions/include_type"}
+            }
+        },
+        "properties2_type": {
+            "type": "object",
+            "properties": {
+                "@schemaLocation": {"$ref": "#/definitions/@targetNamespace_type"}
+            }
+        },
+        "include_type_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties2_type"}
+            }
+        },
+        "properties3_type": {
+            "type": "object",
+            "properties": {
+                "documentation": {"$ref": "#/definitions/@targetNamespace_type"}
+            }
+        },
+        "annotation_type_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties3_type"}
+            }
+        },
+        "properties4_type": {
+            "type": "object",
+            "properties": {
+                "@xpath": {"$ref": "#/definitions/@targetNamespace_type"}
+            }
+        },
+        "selector_type_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties4_type"}
+            }
+        },
+        "properties5_type": {
+            "type": "object",
+            "properties": {
+                "@name": {"$ref": "#/definitions/@targetNamespace_type"},
+                "selector": {"$ref": "#/definitions/include_type"},
+                "field": {"$ref": "#/definitions/include_type"}
+            }
+        },
+        "required_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {"type": "string"}
+        },
+        "items_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties5_type"},
+                "required": {"$ref": "#/definitions/required_type"}
+            }
+        },
+        "unique_type_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "minItems": {"type": "integer"},
+                "items": {"$ref": "#/definitions/items_type"}
+            }
+        },
+        "properties6_type": {
+            "type": "object",
+            "properties": {
+                "@name": {"$ref": "#/definitions/@targetNamespace_type"},
+                "@refer": {"$ref": "#/definitions/@targetNamespace_type"},
+                "selector": {"$ref": "#/definitions/include_type"},
+                "field": {"$ref": "#/definitions/include_type"}
+            }
+        },
+        "items2_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties6_type"},
+                "required": {"$ref": "#/definitions/required_type"}
+            }
+        },
+        "keyref_type_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "minItems": {"type": "integer"},
+                "items": {"$ref": "#/definitions/items2_type"}
+            }
+        },
+        "properties7_type": {
+            "type": "object",
+            "properties": {
+                "@name": {"$ref": "#/definitions/@targetNamespace_type"},
+                "@type": {"$ref": "#/definitions/@targetNamespace_type"},
+                "annotation": {"$ref": "#/definitions/include_type"},
+                "unique": {"$ref": "#/definitions/include_type"},
+                "key": {"$ref": "#/definitions/include_type"},
+                "keyref": {"$ref": "#/definitions/include_type"}
+            }
+        },
+        "element_type_type": {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string"},
+                "properties": {"$ref": "#/definitions/properties7_type"}
+            }
+        },
+        "definitions_type": {
+            "type": "object",
+            "properties": {
+                "include_type": {"$ref": "#/definitions/include_type_type"},
+                "annotation_type": {"$ref": "#/definitions/annotation_type_type"},
+                "selector_type": {"$ref": "#/definitions/selector_type_type"},
+                "unique_type": {"$ref": "#/definitions/unique_type_type"},
+                "keyref_type": {"$ref": "#/definitions/keyref_type_type"},
+                "element_type": {"$ref": "#/definitions/element_type_type"}
+            }
+        }
+    }
+}

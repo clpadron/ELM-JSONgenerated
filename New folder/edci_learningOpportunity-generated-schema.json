@@ -1,0 +1,153 @@
+{
+    "$schema": "https://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "@targetNamespace": {"type": "string"},
+        "@elementFormDefault": {"type": "string"},
+        "@version": {"type": "string"},
+        "include": {"$ref": "#/definitions/include_type"},
+        "complexType": {"$ref": "#/definitions/complexType_type"},
+        "group": {"$ref": "#/definitions/group2_type"}
+    },
+    "definitions": {
+        "include_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@schemaLocation": {"type": "string"}
+                },
+                "required": ["@schemaLocation"]
+            }
+        },
+        "annotation_type": {
+            "type": "object",
+            "properties": {
+                "documentation": {"type": "string"}
+            }
+        },
+        "element_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@name": {"type": "string"},
+                    "@type": {"type": "string"},
+                    "@minOccurs": {"type": "string"},
+                    "annotation": {"$ref": "#/definitions/annotation_type"},
+                    "@maxOccurs": {"type": "string"}
+                },
+                "required": [
+                    "@minOccurs",
+                    "annotation",
+                    "@name",
+                    "@type"
+                ]
+            }
+        },
+        "group_type": {
+            "type": "object",
+            "properties": {
+                "@ref": {"type": "string"}
+            }
+        },
+        "sequence_type": {
+            "type": "object",
+            "properties": {
+                "element": {"$ref": "#/definitions/element_type"},
+                "group": {"$ref": "#/definitions/group_type"}
+            }
+        },
+        "attribute_type": {
+            "type": "object",
+            "properties": {
+                "@name": {"type": "string"},
+                "@type": {"type": "string"},
+                "@use": {"type": "string"},
+                "annotation": {"$ref": "#/definitions/annotation_type"}
+            }
+        },
+        "complexType_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@name": {"type": "string"},
+                    "annotation": {"$ref": "#/definitions/annotation_type"},
+                    "sequence": {"$ref": "#/definitions/sequence_type"},
+                    "attribute": {"$ref": "#/definitions/attribute_type"}
+                },
+                "required": [
+                    "annotation",
+                    "sequence",
+                    "@name"
+                ]
+            }
+        },
+        "element2_type": {
+            "type": "object",
+            "properties": {
+                "@name": {"type": "string"},
+                "@type": {"type": "string"},
+                "@minOccurs": {"type": "string"},
+                "@maxOccurs": {"type": "string"},
+                "annotation": {"$ref": "#/definitions/annotation_type"}
+            }
+        },
+        "sequence2_type": {
+            "type": "object",
+            "properties": {
+                "element": {"$ref": "#/definitions/element2_type"}
+            }
+        },
+        "complexType2_type": {
+            "type": "object",
+            "properties": {
+                "sequence": {"$ref": "#/definitions/sequence2_type"}
+            }
+        },
+        "element3_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@name": {"type": "string"},
+                    "@type": {"type": "string"},
+                    "@minOccurs": {"type": "string"},
+                    "@maxOccurs": {"type": "string"},
+                    "annotation": {"$ref": "#/definitions/annotation_type"},
+                    "complexType": {"$ref": "#/definitions/complexType2_type"}
+                },
+                "required": [
+                    "@minOccurs",
+                    "@name"
+                ]
+            }
+        },
+        "sequence3_type": {
+            "type": "object",
+            "properties": {
+                "element": {"$ref": "#/definitions/element3_type"}
+            }
+        },
+        "group2_type": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@name": {"type": "string"},
+                    "sequence": {"$ref": "#/definitions/sequence3_type"}
+                },
+                "required": [
+                    "sequence",
+                    "@name"
+                ]
+            }
+        }
+    }
+}
